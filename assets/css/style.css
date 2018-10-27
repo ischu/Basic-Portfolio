@@ -1,0 +1,41 @@
+body {
+    background-image: "" ;
+    color: #777 ;
+    font-family: 'Arial', 'helvetica Neue', Helvetica, sans-serif;
+}
+/* Main Header */
+.mainHeader {
+  background-color: #fff;
+  border-color: #ccc;
+  border-bottom-width: 4px;
+  font-family: 'Georgia', Times, 'Times New Roman', serif;
+}
+
+.myName {
+  background-color: #4aaaa5; 
+  color: #fff;
+}
+
+.links {
+
+}
+
+/* Main Content Box */
+.contentBox {
+  background-color: #fff;
+  border-color: #ddd;
+  border-bottom-width: 4px;
+}
+
+.contentHead {
+  color: #4aaaa5;
+}
+
+.contentBody {
+
+}
+
+/* Footer */
+footer {
+  background-color: #666;
+}
