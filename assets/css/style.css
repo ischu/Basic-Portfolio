@@ -4,18 +4,24 @@ body {
     color: #777 ;
     font-family: 'Arial', 'helvetica Neue', Helvetica, sans-serif;
 }
+/* Teal background white text */
+.tealWhite{
+  background-color: #4aaaa5; 
+  color: #fff;
+}
 /* Main Header */
 /* This is the header background */
 .mainHeaderBox {
   background-color: #fff;
   border-color: #ccc;
   /* border-bottom-color: black; */
-  border-bottom-width: 2px;
+  border-bottom-width: 4px;
   border-bottom-style: solid;
   /* background-color: red; */
   width: 100%;
-  height: 94px;
-  position: absolute;
+  /* height: 94px; */
+  height: 15%;
+  position: fixed;
   top: 0;
   left:0;
 }
@@ -37,20 +43,23 @@ span{
   float: left;
   display: flex;
   align-items: flex;
-  justify-content: center;
   line-height: 1.6;
 }
 
 #myName {
-  background-color: #4aaaa5; 
-  color: #fff;
-  width: 20%;
+  /* background-color: #4aaaa5; 
+  color: #fff; */
+  width: 150px;
+  /* to line myName text with contentHead text */
+  padding-left: 30px;
+  padding-right: 30px;
   
 }
 
 #links {
   position: absolute;
   right: 0;
+  /* top: 50%; */
 }
 
 /* lines up text of link section with myName */
@@ -72,32 +81,107 @@ a:link, a:visited {
 /* Main Content Box */
 .contentBox {
   background-color: #fff;
-  border-color: #ddd;
-  border-width: 4px;
+/* 4+26+900+26+4 = 960 */
+  border: 4px solid #ddd;
+  width: 900px;
+  padding: 26px;
+/* centers box */
   position: absolute;
-  width: 960px;
-  margin: 25%, 50%, 25%, 50%;
-  
-  
+  margin-top: 100px;
+  margin-bottom: 100px;
+  /* change top to pixels to keep space between box and header consistant*/
+  top: 20%;
+  height: 60%;
+  bottom: 20%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
 
 }
 
 .contentHead {
   color: #4aaaa5;
-}
-
-#profilePic {
-    float: left;
+  border-bottom: 4px solid #ddd;
 }
 
 .contentBody {
-    float: left;
+  float: left;
 }
+
+#profilePic {
+  float: left;
+  width: 180px;
+  height: 144px;
+}
+
+p{
+
+}
+
+/* contact form */
+
+.formSpace{
+  width: 900px;
+}
+
+.message {
+  
+}
+
+.submit{
+  background-color: #4aaaa5;
+  color:#fff;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* portfolio objects */
+
+.projectObject {
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  position: flex;
+  align-items: flex-end;
+  /* background-color:black; */
+}
+/* adding background images */
+
+#PO1 {
+  background-image: url(../images/port1.jpg);
+}
+
+#PO2 {
+  background-image: url(../images/port2.jpg);
+}
+
+#PO3 {
+  background-image: url(../images/port3.jpg);
+}
+
+#PO4 {
+  background-image: url(../images/port4.jpg);
+}
+
+#PO5 {
+  background-image: url(../images/port5.jpg);
+}
+
+#PO6 {
+  background-image: url(../images/port6.jpg);
+}
+
 /* Footer */
 footer {
   background-color: #666;
   width: 100%;
-  height: 60px;
+  /* height: 60px; */
+  height: 10%;
   position: fixed;
   bottom: 0;
   left: 0;
