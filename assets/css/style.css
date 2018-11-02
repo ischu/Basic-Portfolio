@@ -3,12 +3,22 @@ body {
     background: url(../images/gravel.png);
     color: #777 ;
     font-family: 'Arial', 'helvetica Neue', Helvetica, sans-serif;
+    min-height: 100%;
 }
 /* Teal background white text */
 .tealWhite{
   background-color: #4aaaa5; 
   color: #fff;
+  font-family: 'Arial', 'helvetica Neue', Helvetica, sans-serif;
 }
+
+/* clearing floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* Main Header */
 /* This is the header background */
 .mainHeaderBox {
@@ -19,9 +29,9 @@ body {
   border-bottom-style: solid;
   /* background-color: red; */
   width: 100%;
-  /* height: 94px; */
-  height: 15%;
-  position: fixed;
+  height: 94px;
+  /* height: 15%; */
+  position: absolute;
   top: 0;
   left:0;
 }
@@ -38,12 +48,13 @@ body {
   
 }
 /* lines up Main Header elements and sizes them */
-span{
-  height: 100%;
+.navEle{
+  height: 90px;
   float: left;
   display: flex;
   align-items: flex;
   line-height: 1.6;
+  
 }
 
 #myName {
@@ -53,6 +64,8 @@ span{
   /* to line myName text with contentHead text */
   padding-left: 30px;
   padding-right: 30px;
+  background: #4aaaa5;
+  height: 100%;
   
 }
 
@@ -84,19 +97,33 @@ a:link, a:visited {
 /* 4+26+900+26+4 = 960 */
   border: 4px solid #ddd;
   width: 900px;
-  padding: 26px;
+  padding-left: 26px;
+  padding-right: 26px;
 /* centers box */
   position: absolute;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   margin-bottom: 100px;
   /* change top to pixels to keep space between box and header consistant*/
-  top: 20%;
-  height: 60%;
+  top: 120px;
   bottom: 20%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%);
+  /* overflow: auto; */
+}
 
+/* heights for each content box */
+
+#aboutBox {
+  height: 400px;
+}
+
+#portfolioBox {
+  height: 560px
+}
+
+#contactBox {
+  height: 470px
 }
 
 .contentHead {
@@ -104,28 +131,15 @@ a:link, a:visited {
   border-bottom: 4px solid #ddd;
 }
 
-.contentBody {
-  float: left;
-}
-
 #profilePic {
   float: left;
-  width: 180px;
-  height: 144px;
-}
-
-p{
-
+  margin-right: 10px;
 }
 
 /* contact form */
 
 .formSpace{
   width: 900px;
-}
-
-.message {
-  
 }
 
 .submit{
@@ -145,10 +159,16 @@ p{
   float: left;
   width: 200px;
   height: 200px;
-  margin: 50px;
-  position: flex;
-  align-items: flex-end;
+  margin: 50px, 20px;
+  text-align: center;
   /* background-color:black; */
+}
+ /* adjust positioning of porfolio labels */
+.portLabel { 
+  position: relative;
+  top: 70%;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 /* adding background images */
 
@@ -181,7 +201,7 @@ footer {
   background-color: #666;
   width: 100%;
   /* height: 60px; */
-  height: 10%;
+  height: 8%;
   position: fixed;
   bottom: 0;
   left: 0;
