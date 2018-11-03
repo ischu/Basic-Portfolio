@@ -87,9 +87,10 @@ a:link, a:visited {
   color: #777 ;
   font-family: 'Arial', 'helvetica Neue', Helvetica, sans-serif;
 }
-/* a:hover {
 
-} */
+a:hover {
+  color: #4aaaa5;
+}
 
 /* Main Content Box */
 .contentBox {
@@ -112,6 +113,11 @@ a:link, a:visited {
   /* overflow: auto; */
 }
 
+.contentHead {
+  color: #4aaaa5;
+  border-bottom: 4px solid #ddd;
+}
+
 /* heights for each content box */
 
 #aboutBox {
@@ -122,14 +128,11 @@ a:link, a:visited {
   height: 560px
 }
 
-#contactBox {
+#formBox {
   height: 470px
 }
 
-.contentHead {
-  color: #4aaaa5;
-  border-bottom: 4px solid #ddd;
-}
+/* for index.html */
 
 #profilePic {
   float: left;
@@ -196,12 +199,20 @@ a:link, a:visited {
   background-image: url(../images/port6.jpg);
 }
 
-/* Footer */
+/* Footer stuff (tried to make sticky)*/
+.wrapper{
+  min-height:100%;
+  margin-bottom: -52px;
+}
+.push{
+  height:52px;
+}
 footer {
   background-color: #666;
   width: 100%;
-  /* height: 60px; */
-  height: 8%;
+  height: 52px;
+  margin-top: 52px;
+  /* height: 8%; */
   position: fixed;
   bottom: 0;
   left: 0;
